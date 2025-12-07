@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Jornada - Barra Cronológica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .timeline-container {
+            width: 800px;
+            max-width: 100%;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            margin: 0 auto;
+        }
+        
+        .title {
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 18px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 0 auto;
+        }
+        
+        /* Linha vertical */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #3498db;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 40px;
+        }
+        
+        /* Círculos na linha */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #3498db;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #3498db;
+            z-index: 1;
+        }
+        
+        .year {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .event {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .event-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .event-description {
+            font-size: 16px;
+            color: #7f8c8d;
+            line-height: 1.5;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .timeline-container {
+                padding: 25px;
+            }
+            
+            .title {
+                font-size: 28px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .timeline {
+                padding-left: 20px;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 30px;
+            }
+            
+            .timeline-item::before {
+                left: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .timeline-container {
+                padding: 20px 15px;
+            }
+            
+            .title {
+                font-size: 24px;
+            }
+            
+            .subtitle {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline-container">
+        <h1 class="title">Nossa Jornada</h1>
+        <p class="subtitle">Marcos importantes que moldaram nossa história</p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">1974</div>
+                <div class="event">
+                    <h3 class="event-title">Fundação do Clube Arena Conectada</h3>
+                    <p class="event-description">Início das atividades do clube com foco em promover o esporte e a comunidade.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="year">1985</div>
+                <div class="event">
+                    <h3 class="event-title">Construção da primeira piscina olímpica</h3>
+                    <p class="event-description">Ampliação das instalações para atender atletas de alto rendimento e competições regionais.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="year">1995</div>
+                <div class="event">
+                    <h3 class="event-title">Inauguração do complexo de tênis</h3>
+                    <p class="event-description">Expansão do clube com quadras de tênis de última geração para prática profissional e amadora.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
